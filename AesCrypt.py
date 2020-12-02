@@ -12,7 +12,7 @@ def get_arguments(): # function for parsing arguments
     return options
 
 def encrypt(filename,password): # function for encrypting files 
-	bufferSize = 64 * 1024 # function for encrypting files 
+	bufferSize = 64 * 1024 # define buffer size (amount of time) to minimize overhead (resources required), here buffer size is 64K 
 	
 	pyAesCrypt.encryptFile(filename, filename+".aes", password, bufferSize) # use function encryptFile to encrypt file with .aes extension
 
